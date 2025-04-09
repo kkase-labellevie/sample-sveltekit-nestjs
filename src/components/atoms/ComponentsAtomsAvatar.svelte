@@ -1,7 +1,16 @@
 <script lang="ts">
+  import { css } from 'styled-system/css'
+
   export let src: string
   export let alt: string
   export let size: number = 80
 </script>
 
-<img src={`${src}`} {alt} width={size} height={size} class="rounded-full" />
+<img
+  {src}
+  {alt}
+  class={css({
+    width: `${size}px`,
+    height: `${size}px`
+  })}
+/>

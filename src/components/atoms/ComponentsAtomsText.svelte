@@ -1,6 +1,14 @@
 <script lang="ts">
+  import { css } from 'styled-system/css'
+
   export let content: string
   export let size: number = 16
 </script>
 
-<p style="font-size: {size}px;">{content}</p>
+<p
+  class={css({
+    fontSize: `${size}px`
+  })}
+>
+  {content}
+</p>
