@@ -1,8 +1,8 @@
 <script lang="ts">
-  import Avatar from '../atoms/Avatar.svelte'
-  import Button from '../atoms/Button.svelte'
-  import ProfileInfo from '../molecules/ProfileInfo.svelte'
-  import Text from '../atoms/Text.svelte'
+  import Avatar from '../atoms/ComponentsAtomsAvatar.svelte'
+  import Button from '../atoms/ComponentsAtomsButton.svelte'
+  import ProfileInfo from '../molecules/ComponentsMoleculesProfileInfo.svelte'
+  import Text from '../atoms/ComponentsAtomsText.svelte'
   export let avatarUrl: string
   export let name: string
   export let job: string

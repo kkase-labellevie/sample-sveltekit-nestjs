@@ -1,5 +1,5 @@
 <script lang="ts">
-  import ProfileCard from '../organisms/ProfileCard.svelte'
+  import ProfileCard from '../organisms/ComponentsOrganismsProfileCard.svelte'
   import profileImg from '../../assets/image/bird_fukurou_run.png'
 </script>
 

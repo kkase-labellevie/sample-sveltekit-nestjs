@@ -1,5 +1,5 @@
 <script lang="ts">
-  import Text from '../atoms/Text.svelte'
+  import Text from '../atoms/ComponentsAtomsText.svelte'
   export let name: string
   export let job: string
 </script>
