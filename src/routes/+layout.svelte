@@ -1,5 +1,6 @@
 <script lang="ts">
   import Header from '../components/templates/Header.svelte'
+  import '../app.css'
 </script>
 
 <Header />
