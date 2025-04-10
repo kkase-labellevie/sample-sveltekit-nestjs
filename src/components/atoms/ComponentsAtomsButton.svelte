@@ -2,6 +2,7 @@
   import { css } from 'styled-system/css'
   export let label: string
   export let onClick: () => void
+  //test
 </script>
 
 <button
