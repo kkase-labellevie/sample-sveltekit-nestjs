@@ -1,7 +1,13 @@
 <script lang="ts">
   import { css } from 'styled-system/css'
+  import { setContext } from 'svelte'
   import ProfileCard from '../organisms/ComponentsOrganismsProfileCard.svelte'
   import profileImg from '../../assets/image/bird_fukurou_run.png'
+
+  const testData = {
+    test: 'ContextTestData'
+  }
+  setContext('test', testData)
 </script>
 
 <div>

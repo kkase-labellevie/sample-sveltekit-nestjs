@@ -1,9 +1,16 @@
 <script lang="ts">
   import { css } from 'styled-system/css'
+  import { getContext } from 'svelte'
 
   export let content: string
   export let size: number = 16
   //test
+
+  interface TestDataType {
+    test: string
+  }
+
+  const testData = getContext<TestDataType>('test')
 </script>
 
 <p
@@ -11,5 +18,6 @@
     fontSize: `${size}px`
   })}
 >
-  {content}
+  {content}<br />
+  {testData.test}
 </p>
