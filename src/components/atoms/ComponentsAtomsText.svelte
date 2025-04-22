@@ -1,9 +1,16 @@
 <script lang="ts">
   import { css } from 'styled-system/css'
+  import { getContext } from 'svelte'
 
   export let content: string
   export let size: number = 16
   //test
+
+  interface TestDataType {
+    test: string
+  }
+
+  const testData = getContext<TestDataType>('test')
 </script>
 
 <p
@@ -12,4 +19,8 @@
   })}
 >
   {content}<br />
+<<<<<<< HEAD
+=======
+  {testData.test}
+>>>>>>> 5849067a00dc8312ac751de9e52e9f7f59abe823
 </p>
