@@ -5,7 +5,7 @@ export default defineConfig({
   preflight: true,
 
   // Where to look for your css declarations
-  include: ['./src/**/*.{js,ts,svelte}'],
+  include: ['./frontend/src/**/*.{js,ts,svelte}'],
 
   // Files to exclude
   exclude: [],
