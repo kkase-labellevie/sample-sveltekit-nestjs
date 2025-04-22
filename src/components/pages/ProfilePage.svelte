@@ -2,15 +2,16 @@
   import { css } from 'styled-system/css'
   import ProfileCard from '../organisms/ComponentsOrganismsProfileCard.svelte'
   import profileImg from '../../assets/image/bird_fukurou_run.png'
+
+  const data = {
+    name: '山田 太郎',
+    job: 'フロントエンドエンジニア',
+    bio: 'ReactとSvelteKitが得意なエンジニアです。'
+  }
 </script>
 
 <div>
-  <ProfileCard
-    avatarUrl={profileImg}
-    name="山田 太郎"
-    job="フロントエンドエンジニア"
-    bio="ReactとSvelteKitが得意なエンジニアです。"
-  />
+  <ProfileCard avatarUrl={profileImg} name={data.name} job={data.job} bio={data.bio} />
 </div>
 
 <a

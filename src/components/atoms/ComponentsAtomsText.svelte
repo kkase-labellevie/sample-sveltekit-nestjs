@@ -11,5 +11,5 @@
     fontSize: `${size}px`
   })}
 >
-  {content}
+  {content}<br />
 </p>
