@@ -19,8 +19,4 @@
   })}
 >
   {content}<br />
-<<<<<<< HEAD
-=======
-  {testData.test}
->>>>>>> 5849067a00dc8312ac751de9e52e9f7f59abe823
 </p>

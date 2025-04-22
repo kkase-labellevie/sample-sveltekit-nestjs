@@ -4,18 +4,11 @@
   import ProfileCard from '../organisms/ComponentsOrganismsProfileCard.svelte'
   import profileImg from '../../assets/image/bird_fukurou_run.png'
 
-<<<<<<< HEAD
   const data = {
     name: '山田 太郎',
     job: 'フロントエンドエンジニア',
     bio: 'ReactとSvelteKitが得意なエンジニアです。'
   }
-=======
-  const testData = {
-    test: 'ContextTestData'
-  }
-  setContext('test', testData)
->>>>>>> 5849067a00dc8312ac751de9e52e9f7f59abe823
 </script>
 
 <div>
