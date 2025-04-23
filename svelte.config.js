@@ -15,7 +15,6 @@ const config = {
       'styled-system': './styled-system/*'
     },
     files: {
-      assets: 'frontend/src/assets',
       lib: 'frontend/src/lib',
       routes: 'frontend/src/routes',
       appTemplate: 'frontend/src/app.html'
