@@ -1,5 +1,11 @@
 node_modules
 
+# frontend
+/frontend/node_modules
+
+# backend
+/backend/node_modules
+
 # Output
 .output
 .vercel
