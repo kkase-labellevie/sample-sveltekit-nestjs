@@ -69,4 +69,25 @@
   >
     Countページ(状態管理学習)
   </a>
+  <a
+    href="/api-test"
+    class={css({
+      color: '#0073e6',
+      fontSize: '18px',
+      textDecoration: 'none',
+      marginBottom: '10px',
+      padding: '8px 12px',
+      borderRadius: '4px',
+      transition: 'background-color 0.3s, color 0.3s',
+      '&:hover': {
+        backgroundColor: '#0073e6',
+        color: 'white'
+      },
+      '&:active': {
+        backgroundColor: '#005bb5'
+      }
+    })}
+  >
+    APTテストページ
+  </a>
 </div>

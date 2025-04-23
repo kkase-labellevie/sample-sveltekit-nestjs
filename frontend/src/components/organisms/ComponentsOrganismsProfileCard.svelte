@@ -4,7 +4,6 @@
   import Button from '../atoms/ComponentsAtomsButton.svelte'
   import ProfileInfo from '../molecules/ComponentsMoleculesProfileInfo.svelte'
   import Bio from '../molecules/ComponentsMoleculesBio.svelte'
-  import Text from '../atoms/ComponentsAtomsText.svelte'
 
   export let avatarUrl: string
   export let name: string

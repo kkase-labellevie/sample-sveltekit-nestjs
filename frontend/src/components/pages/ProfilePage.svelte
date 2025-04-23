@@ -1,14 +1,19 @@
 <script lang="ts">
+  import { onMount } from 'svelte'
   import { css } from 'styled-system/css'
-  import { setContext } from 'svelte'
   import ProfileCard from '../organisms/ComponentsOrganismsProfileCard.svelte'
   import profileImg from '../../assets/image/bird_fukurou_run.png'
 
-  const data = {
-    name: '山田 太郎',
-    job: 'フロントエンドエンジニア',
-    bio: 'ReactとSvelteKitが得意なエンジニアです。'
+  let data = {
+    name: '',
+    job: '',
+    bio: ''
   }
+
+  onMount(async () => {
+    const res = await fetch('/api/user-data')
+    data = await res.json()
+  })
 </script>
 
 <div>

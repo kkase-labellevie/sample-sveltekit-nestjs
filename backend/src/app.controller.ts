@@ -9,4 +9,8 @@ export class AppController {
   sendKafkaMessage() {
     return this.kafkaService.sendMessage('Hello from Kafka!');
   }
+
+  getHello() {
+    return 'Hello World!';
+  }
 }
