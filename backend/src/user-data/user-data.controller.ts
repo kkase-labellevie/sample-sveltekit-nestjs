@@ -1,20 +1,26 @@
 import { Controller, Get } from '@nestjs/common';
 import { KafkaService } from '../kafka/kafka.service'; // Kafkaサービスをインポート
+import { UserDataService } from './user-data.service';
 
 @Controller('user-data')
 export class UserDataController {
-  constructor(private readonly kafkaService: KafkaService) {}
+  constructor(
+    private readonly kafkaService: KafkaService,
+    private readonly userDataService: UserDataService,
+  ) {}
+
+  @Get('insert')
+  async insertUser() {
+    await this.userDataService.insertUser();
+    return { status: 'User inserted!' };
+  }
 
   @Get()
   async getUserData() {
     // Kafkaにメッセージ送信！
     await this.kafkaService.sendMessage('ユーザーデータリクエストが来た！');
 
-    // HTTPレスポンスとしてデータを返す
-    return {
-      name: '山田 太郎',
-      job: 'フロントエンドエンジニア',
-      bio: 'ReactとSvelteKitが得意なエンジニアです!',
-    };
+    const user = await this.userDataService.getUser();
+    return user;
   }
 }
