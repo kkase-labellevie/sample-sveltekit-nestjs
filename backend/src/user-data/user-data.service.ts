@@ -6,14 +6,13 @@ import { users } from '../../drizzle/schema';
 export class UserDataService {
   async insertUser() {
     await db.insert(users).values({
-      name: '佐々木 太郎',
-      job: 'バックエンドエンジニア',
-      bio: 'NestJSが得意なエンジニアです!',
+      name: 'あざらし 太輔',
+      job: 'あざらしエンジニアあああ',
+      bio: 'あざらしが得意なエンジニアです!',
     });
   }
 
   async getUser() {
-    const result = await db.select().from(users);
-    return result[2];
+    return await db.select().from(users);
   }
 }
