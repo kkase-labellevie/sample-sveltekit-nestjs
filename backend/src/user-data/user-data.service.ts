@@ -4,11 +4,11 @@ import { users } from '../../drizzle/schema';
 
 @Injectable()
 export class UserDataService {
-  async insertUser() {
+  async insertUser(body: { name: string; job: string; bio: string }) {
     await db.insert(users).values({
-      name: 'あざらし 太輔',
-      job: 'あざらしエンジニアあああ',
-      bio: 'あざらしが得意なエンジニアです!',
+      name: body.name,
+      job: body.job,
+      bio: body.bio,
     });
   }
 

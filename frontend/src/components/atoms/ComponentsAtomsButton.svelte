@@ -1,24 +1,26 @@
 <script lang="ts">
   import { css } from 'styled-system/css'
   export let label: string
-  export let onClick: () => void
+  export let type: 'button' | 'submit' | 'reset' = 'button'
+  export let onClick: () => void = () => {}
   //test
 </script>
 
 <button
+  {type}
   on:click={onClick}
   class={css({
-    px: '16px', // padding-left, padding-right
-    py: '8px', // padding-top, padding-bottom
-    bg: 'blue.500', // 背景色
-    color: 'white', // 文字色
-    borderRadius: '8px', // 角丸
-    fontSize: 'lg', // フォントサイズ
-    fontWeight: 'bold', // フォント太さ
+    px: '16px',
+    py: '8px',
+    bg: 'blue.500',
+    color: 'white',
+    borderRadius: '8px',
+    fontSize: 'lg',
+    fontWeight: 'bold',
     '&:hover': {
-      bg: 'blue.600' // ホバー時の背景色
+      bg: 'blue.600'
     },
-    cursor: 'pointer' // カーソルをポインターに
+    cursor: 'pointer'
   })}
 >
   {label}

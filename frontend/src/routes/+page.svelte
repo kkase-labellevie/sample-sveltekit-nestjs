@@ -70,7 +70,7 @@
     Countページ(状態管理学習)
   </a>
   <a
-    href="/api-test"
+    href="/profile-input"
     class={css({
       color: '#0073e6',
       fontSize: '18px',
@@ -88,6 +88,6 @@
       }
     })}
   >
-    APTテストページ
+    プロフィールを入力
   </a>
 </div>

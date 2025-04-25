@@ -1,4 +1,4 @@
-import { Controller, Get } from '@nestjs/common';
+import { Controller, Get, Post, Body } from '@nestjs/common';
 import { KafkaService } from '../kafka/kafka.service'; // Kafkaサービスをインポート
 import { UserDataService } from './user-data.service';
 
@@ -9,9 +9,9 @@ export class UserDataController {
     private readonly userDataService: UserDataService,
   ) {}
 
-  @Get('insert')
-  async insertUser() {
-    await this.userDataService.insertUser();
+  @Post()
+  async insertUser(@Body() body: { name: string; job: string; bio: string }) {
+    await this.userDataService.insertUser(body);
     return { status: 'User inserted!' };
   }
 
