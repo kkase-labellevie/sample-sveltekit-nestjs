@@ -1,5 +1,5 @@
-import { Controller, Get, Post, Body } from '@nestjs/common';
-import { KafkaService } from '../kafka/kafka.service'; // Kafkaサービスをインポート
+import { Controller, Get, Post, Body, Delete, Param } from '@nestjs/common';
+import { KafkaService } from '../kafka/kafka.service';
 import { UserDataService } from './user-data.service';
 
 @Controller('user-data')
@@ -22,5 +22,11 @@ export class UserDataController {
 
     const user = await this.userDataService.getUser();
     return user;
+  }
+
+  @Delete(':id')
+  async deleteUser(@Param('id') id: string) {
+    await this.userDataService.deleteUser(Number(id));
+    return { status: 'User deleted!' };
   }
 }

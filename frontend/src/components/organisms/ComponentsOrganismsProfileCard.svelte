@@ -9,6 +9,7 @@
   export let name: string
   export let job: string
   export let bio: string
+  export let onDelete: () => void
 
   const handleFollow = () => {
     alert(`フォローしました: ${name}`)
@@ -17,13 +18,13 @@
 
 <div
   class={css({
-    maxWidth: '320px', // max-width: 320px
-    borderRadius: '8px', // 角丸
-    overflow: 'hidden', // はみ出し防止
-    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)', // シャドウ
-    padding: '24px', // パディング
-    backgroundColor: 'white', // 背景色
-    margin: '20px' // 余白
+    maxWidth: '320px',
+    borderRadius: '8px',
+    overflow: 'hidden',
+    boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+    padding: '24px',
+    backgroundColor: 'white',
+    margin: '20px'
   })}
 >
   <Avatar src={avatarUrl} alt={name} />
@@ -33,5 +34,8 @@
   </div>
   <div class={css({ marginTop: '20px' })}>
     <Button label="フォローする" onClick={handleFollow} />
+  </div>
+  <div class={css({ marginTop: '20px' })}>
+    <Button label="削除する" type="button" variant="attention" onClick={onDelete} />
   </div>
 </div>

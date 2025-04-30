@@ -1,6 +1,5 @@
 <script lang="ts">
   import Button from '../atoms/ComponentsAtomsButton.svelte'
-  import { onMount } from 'svelte'
   import { css } from 'styled-system/css'
 
   let name = ''

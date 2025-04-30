@@ -15,6 +15,17 @@
     const res = await fetch('/api/user-data')
     allData = await res.json()
   })
+
+  async function handleDelete(id: number) {
+    const res = await fetch(`/api/user-data/${id}`, {
+      method: 'DELETE'
+    })
+    const result = await res.json()
+    console.log(result)
+
+    // 削除後の表示更新
+    allData = allData.filter((user) => user.id !== id)
+  }
 </script>
 
 <div
@@ -25,7 +36,13 @@
   })}
 >
   {#each allData as data (data.id)}
-    <ProfileCard avatarUrl={profileImg} name={data.name} job={data.job} bio={data.bio} />
+    <ProfileCard
+      avatarUrl={profileImg}
+      name={data.name}
+      job={data.job}
+      bio={data.bio}
+      onDelete={() => handleDelete(data.id)}
+    />
   {/each}
 </div>
 
